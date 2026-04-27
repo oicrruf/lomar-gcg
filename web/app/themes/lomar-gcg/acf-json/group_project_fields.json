@@ -1,0 +1,52 @@
+{
+  "key": "group_project_fields",
+  "title": "Project Details",
+  "fields": [
+    {
+      "key": "field_project_photos",
+      "label": "Project Photos",
+      "name": "project_photos",
+      "type": "gallery",
+      "min": 1,
+      "max": 20,
+      "preview_size": "medium",
+      "return_format": "array",
+      "instructions": "Add project photos. First image will be used as the grid thumbnail."
+    },
+    {
+      "key": "field_project_service",
+      "label": "Service Type",
+      "name": "project_service",
+      "type": "select",
+      "choices": {
+        "paver-patios": "Paver Patios",
+        "garden-design": "Garden Design",
+        "fire-pits": "Fire Pits",
+        "retaining-walls": "Retaining Walls",
+        "maintenance": "Maintenance",
+        "other": "Other"
+      },
+      "default_value": "",
+      "allow_null": 0,
+      "return_format": "value"
+    },
+    {
+      "key": "field_project_location",
+      "label": "Location",
+      "name": "project_location",
+      "type": "text",
+      "placeholder": "e.g. McLean, VA",
+      "instructions": "City and state where the project was completed."
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "post_type",
+        "operator": "==",
+        "value": "project"
+      }
+    ]
+  ],
+  "active": true
+}

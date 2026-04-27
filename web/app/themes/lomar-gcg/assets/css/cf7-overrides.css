@@ -1,0 +1,49 @@
+/* CF7 overrides — matches LoMar GCG design system */
+.wpcf7 form { font-family: var(--font-body); }
+.wpcf7 .wpcf7-form-control-wrap { display: block; width: 100%; margin-bottom: var(--sp-4); }
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 select,
+.wpcf7 textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  transition: border-color .2s;
+  outline: none;
+}
+.wpcf7 input:focus,
+.wpcf7 select:focus,
+.wpcf7 textarea:focus { border-color: var(--accent); }
+.wpcf7 textarea { min-height: 120px; resize: vertical; }
+.wpcf7 input[type="submit"] {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: none;
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: filter .2s, transform .18s;
+}
+.wpcf7 input[type="submit"]:hover { filter: brightness(1.08); transform: translateY(-1px); }
+.wpcf7 .wpcf7-not-valid-tip { color: oklch(0.55 0.22 28); font-size: var(--fs-xs); margin-top: 4px; }
+.wpcf7 .wpcf7-response-output {
+  margin: var(--sp-4) 0 0;
+  padding: var(--sp-3) var(--sp-4);
+  border-radius: var(--radius);
+  font-size: var(--fs-sm);
+  border: 1px solid var(--line);
+}
+.wpcf7 .wpcf7-mail-sent-ok { border-color: var(--accent); background: color-mix(in oklab, var(--accent) 8%, transparent); }
+.wpcf7 .wpcf7-validation-errors { border-color: oklch(0.55 0.22 28); }

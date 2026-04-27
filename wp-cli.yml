@@ -1,0 +1,8 @@
+path: web/wp
+server:
+  docroot: web
+
+@production:
+  ssh: u320060676@145.223.125.133:65002/home/u320060676/domains/vreyes.dev/public_html
+  path: web/wp
+  cmd: wp-cli

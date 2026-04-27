@@ -1,1 +1,49 @@
-/node_modules
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/themes/twentytwentyfive/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+web/app/cache/*
+
+# WordPress core
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Composer
+/vendor
+auth.json
+composer.lock
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# PHPUnit/Pest
+phpunit.xml
+.phpunit.result.cache
+.phpunit.cache
+
+# WP-CLI
+wp-cli.local.yml
+
+# Deploy scripts — DB backups
+scripts/database/*.sql
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Visual companion sessions
+.superpowers/

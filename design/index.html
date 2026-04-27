@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" data-palette="lomar" data-type="editorial">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lomar GCG — Landscape Design & Build · Northern Virginia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Archivo:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="styles.css?v=10">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="brand" data-nav="home">
+      <img src="logo-lomar-gcg.png" alt="Lomar General Contracting Group" class="brand-logo">
+    </a>
+    <nav class="nav-links">
+      <a href="#home" data-nav="home" data-t-en="Home" data-t-es="Inicio" class="active">Home</a>
+      <a href="#services" data-nav="services" data-t-en="Services" data-t-es="Servicios">Services</a>
+      <a href="#portfolio" data-nav="portfolio" data-t-en="Portfolio" data-t-es="Portafolio">Portfolio</a>
+      <a href="#about" data-nav="about" data-t-en="About" data-t-es="Nosotros">About</a>
+      <a href="#contact" data-nav="contact" data-t-en="Contact" data-t-es="Contacto">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="on" data-lang="en">EN</button>
+        <button data-lang="es">ES</button>
+      </div>
+      <a href="#contact" data-nav="contact" class="btn btn-primary" data-t-en="Free Quote" data-t-es="Cotización">Free Quote <span class="arrow">→</span></a>
+      <button class="mobile-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- Credentials bar -->
+<div class="creds-bar">
+  <div class="container creds-inner">
+    <span class="cred"><span class="cred-icon">✓</span> <span data-t-en="Licensed Class A Contractor" data-t-es="Contratista Clase A Licenciado">Licensed Class A Contractor</span></span>
+    <span class="cred-sep">•</span>
+    <span class="cred"><span class="cred-icon">✓</span> <span data-t-en="Fully Insured &amp; Bonded" data-t-es="Asegurado y Bonded">Fully Insured &amp; Bonded</span></span>
+    <span class="cred-sep">•</span>
+    <span class="cred"><span class="cred-icon">✓</span> <span data-t-en="2-Year Workmanship Warranty" data-t-es="Garantía de 2 años en mano de obra">2-Year Workmanship Warranty</span></span>
+    <span class="cred-sep">•</span>
+    <span class="cred"><span class="cred-icon">✓</span> <span data-t-en="Serving Northern VA since 2006" data-t-es="Servicio en Virginia desde 2006">Serving Northern VA since 2006</span></span>
+    <span class="cred-sep">•</span>
+    <span class="cred"><span class="cred-icon">✓</span> <span data-t-en="Native-plant specialists" data-t-es="Especialistas en plantas nativas">Native-plant specialists</span></span>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<section class="page on" id="page-home">
+
+  <div class="hero container">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow" data-t-en="Landscape Design · Build · Maintain" data-t-es="Diseño · Construcción · Mantenimiento">Landscape Design · Build · Maintain</span>
+        <h1 data-t-en="Landscapes that <em>live with your home.</em>" data-t-es="Paisajes que <em>viven con tu hogar.</em>">Landscapes that <em>live with your home.</em></h1>
+        <p class="hero-sub" data-t-en="Lomar GCG is a full-service landscape contractor designing and building gardens, patios, lighting and outdoor living spaces across Northern Virginia. Twenty years cultivating the yards of the DMV." data-t-es="Lomar GCG es un contratista de paisajismo: diseñamos y construimos jardines, patios, iluminación y espacios exteriores en el norte de Virginia. Veinte años cultivando jardines en el área metropolitana.">Lomar GCG is a full-service landscape contractor designing and building gardens, patios, lighting and outdoor living spaces across Northern Virginia. Twenty years cultivating the yards of the DMV.</p>
+        <div class="hero-ctas">
+          <a href="#contact" data-nav="contact" class="btn btn-primary" data-t-en="Get a Free Estimate" data-t-es="Cotización Gratuita">Get a Free Estimate <span class="arrow">→</span></a>
+          <a href="#portfolio" data-nav="portfolio" class="btn btn-ghost" data-t-en="See Our Work" data-t-es="Ver Proyectos">See Our Work</a>
+          <a href="tel:+5712883130" class="btn btn-ghost">(+571) 288-3130</a>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <div class="n">20<em>+</em></div>
+            <div class="l" data-t-en="Years Combined Experience" data-t-es="Años de Experiencia">Years Combined Experience</div>
+          </div>
+          <div>
+            <div class="n">400<em>+</em></div>
+            <div class="l" data-t-en="Projects Completed" data-t-es="Proyectos Completados">Projects Completed</div>
+          </div>
+          <div>
+            <div class="n">7</div>
+            <div class="l" data-t-en="Cities Served in VA" data-t-es="Ciudades en Virginia">Cities Served in VA</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1200&q=80" alt="Manicured landscape">
+        <div class="hero-badge">
+          <div class="dot"></div>
+          <div>
+            <div class="t" data-t-en="Available now" data-t-es="Disponible">Available now</div>
+            <div class="v" data-t-en="Booking Spring 2026" data-t-es="Reservas Primavera 2026">Booking Spring 2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>
+        <span>Garden Design</span><span class="sep">✦</span>
+        <span>Paver Patios</span><span class="sep">✦</span>
+        <span>Fire Pits</span><span class="sep">✦</span>
+        <span>Retaining Walls</span><span class="sep">✦</span>
+        <span>Lawn Care</span><span class="sep">✦</span>
+        <span>Pool Decks</span><span class="sep">✦</span>
+        <span>Drainage</span><span class="sep">✦</span>
+        <span>Landscape Lighting</span><span class="sep">✦</span>
+        <span>Sod &amp; Seed</span><span class="sep">✦</span>
+      </span>
+      <span>
+        <span>Garden Design</span><span class="sep">✦</span>
+        <span>Paver Patios</span><span class="sep">✦</span>
+        <span>Fire Pits</span><span class="sep">✦</span>
+        <span>Retaining Walls</span><span class="sep">✦</span>
+        <span>Lawn Care</span><span class="sep">✦</span>
+        <span>Pool Decks</span><span class="sep">✦</span>
+        <span>Drainage</span><span class="sep">✦</span>
+        <span>Landscape Lighting</span><span class="sep">✦</span>
+        <span>Sod &amp; Seed</span><span class="sep">✦</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- Services list (rows) -->
+  <div class="section container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" data-t-en="What we build" data-t-es="Lo que construimos">What we build</span>
+        <h2 data-t-en="Eight disciplines.<br/><em>One team.</em>" data-t-es="Ocho disciplinas.<br/><em>Un solo equipo.</em>">Eight disciplines.<br><em>One team.</em></h2>
+      </div>
+      <div class="right" data-t-en="From a single flagstone walkway to a full outdoor kitchen with a wood-burning fireplace — every project is built in-house by our crews. No subcontractor shuffle." data-t-es="Desde un camino de piedra hasta una cocina exterior completa con chimenea de leña — cada proyecto lo construyen nuestros propios equipos. Sin subcontratistas desconocidos.">From a single flagstone walkway to a full outdoor kitchen with a wood-burning fireplace — every project is built in-house by our crews. No subcontractor shuffle.</div>
+    </div>
+
+    <div class="services-list" id="services-list"></div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="n">20<em>+</em></div>
+          <div class="l" data-t-en="Years combined experience" data-t-es="Años de experiencia combinada">Years combined experience</div>
+        </div>
+        <div class="stat">
+          <div class="n">400<em>+</em></div>
+          <div class="l" data-t-en="Outdoor projects delivered" data-t-es="Proyectos exteriores entregados">Outdoor projects delivered</div>
+        </div>
+        <div class="stat">
+          <div class="n">98<em>%</em></div>
+          <div class="l" data-t-en="Clients return or refer" data-t-es="Clientes regresan o recomiendan">Clients return or refer</div>
+        </div>
+        <div class="stat">
+          <div class="n">7</div>
+          <div class="l" data-t-en="Cities in Northern Virginia served" data-t-es="Ciudades en el norte de Virginia">Cities in Northern Virginia served</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Process -->
+  <div class="section process">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-t-en="How it works" data-t-es="Nuestro proceso">How it works</span>
+          <h2 data-t-en="A four-step<br/><em>build process.</em>" data-t-es="Un proceso de<br/><em>cuatro pasos.</em>">A four-step<br><em>build process.</em></h2>
+        </div>
+        <div class="right" data-t-en="Transparent from first walk-through to final walk-around. Fixed timelines, fixed quotes, no surprises." data-t-es="Transparente desde la primera visita hasta la entrega final. Tiempos y precios fijos, sin sorpresas.">Transparent from first walk-through to final walk-around. Fixed timelines, fixed quotes, no surprises.</div>
+      </div>
+      <div class="process-grid">
+        <div class="step">
+          <div class="num">01 / DISCOVERY</div>
+          <h4 data-t-en="Walk your site" data-t-es="Visitamos su sitio">Walk your site</h4>
+          <p data-t-en="Free on-site visit in the DMV. We measure, listen, sketch — and leave with a shared vision." data-t-es="Visita gratuita en el área metropolitana. Medimos, escuchamos y dibujamos — salimos con una visión compartida.">Free on-site visit in the DMV. We measure, listen, sketch — and leave with a shared vision.</p>
+        </div>
+        <div class="step">
+          <div class="num">02 / DESIGN</div>
+          <h4 data-t-en="Concept &amp; quote" data-t-es="Concepto y cotización">Concept &amp; quote</h4>
+          <p data-t-en="A written proposal, material palette and a fixed estimate within 5 business days. You review, we refine." data-t-es="Propuesta escrita, paleta de materiales y cotización fija en 5 días hábiles. Revisas, refinamos.">A written proposal, material palette and a fixed estimate within 5 business days. You review, we refine.</p>
+        </div>
+        <div class="step">
+          <div class="num">03 / BUILD</div>
+          <h4 data-t-en="Craft on site" data-t-es="Construcción">Craft on site</h4>
+          <p data-t-en="Our own crew builds. Daily photo updates, clean job-site, respectful neighbors. No surprise change-orders." data-t-es="Nuestro propio equipo construye. Fotos diarias, obra limpia, respeto por los vecinos. Sin cambios sorpresa.">Our own crew builds. Daily photo updates, clean job-site, respectful neighbors. No surprise change-orders.</p>
+        </div>
+        <div class="step">
+          <div class="num">04 / HANDOVER</div>
+          <h4 data-t-en="Live outside" data-t-es="Vive afuera">Live outside</h4>
+          <p data-t-en="Final walk-through, care guide, and a 2-year workmanship warranty. We stay in touch." data-t-es="Entrega final, guía de cuidados y garantía de 2 años en mano de obra. Seguimos en contacto.">Final walk-through, care guide, and a 2-year workmanship warranty. We stay in touch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio preview -->
+  <div class="section container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" data-t-en="Recent work" data-t-es="Trabajos recientes">Recent work</span>
+        <h2 data-t-en="A small sample<br/><em>of 400+ builds.</em>" data-t-es="Una pequeña muestra<br/><em>de 400+ proyectos.</em>">A small sample<br><em>of 400+ builds.</em></h2>
+      </div>
+      <div class="right" style="display:flex;align-items:flex-end;justify-content:flex-end">
+        <a href="#portfolio" data-nav="portfolio" class="btn btn-ghost" data-t-en="View all projects" data-t-es="Ver todos los proyectos">View all projects <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="portfolio-grid">
+      <a class="pf-item pf-a" href="#portfolio" data-nav="portfolio">
+        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80" alt="">
+        <div class="meta"><div class="cat">Outdoor Living · Ashburn</div><div class="ti">The Covington Residence</div></div>
+      </a>
+      <a class="pf-item pf-b" href="#portfolio" data-nav="portfolio">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="">
+        <div class="meta"><div class="cat">Fireplaces · McLean</div><div class="ti">Dry-stack Chimney</div></div>
+      </a>
+      <a class="pf-item pf-c" href="#portfolio" data-nav="portfolio">
+        <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="meta"><div class="cat">Driveways · Vienna</div><div class="ti">Belgard Herringbone</div></div>
+      </a>
+      <a class="pf-item pf-d" href="#portfolio" data-nav="portfolio">
+        <img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="meta"><div class="cat">Retaining Walls · Leesburg</div><div class="ti">Garden Terracing</div></div>
+      </a>
+      <a class="pf-item pf-e" href="#portfolio" data-nav="portfolio">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80" alt="">
+        <div class="meta"><div class="cat">Pool Decks · Gainesville</div><div class="ti">Travertine Surround</div></div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Service Area Map -->
+  <div class="section service-area">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-t-en="Coverage" data-t-es="Cobertura">Coverage</span>
+          <h2 data-t-en="Do we build<br/><em>in your zip?</em>" data-t-es="¿Construimos<br/><em>en tu zona?</em>">Do we build<br><em>in your zip?</em></h2>
+        </div>
+        <div class="right" data-t-en="We serve the Northern Virginia metro area and surrounding counties. Outside the ring? Still call — we take on larger projects further out." data-t-es="Servimos el norte de Virginia y los condados cercanos. ¿Más lejos? Llámenos igual — aceptamos proyectos grandes fuera del área.">We serve the Northern Virginia metro area and surrounding counties. Outside the ring? Still call — we take on larger projects further out.</div>
+      </div>
+
+      <div class="map-wrap">
+        <div id="service-map"></div>
+        <form class="zip-form" onsubmit="return checkZip(event)">
+          <div class="eyebrow" data-t-en="Instant Check" data-t-es="Verificación Instantánea">Instant Check</div>
+          <h3 data-t-en="Enter your ZIP code" data-t-es="Ingresa tu código postal">Enter your ZIP code</h3>
+          <div class="zip-row">
+            <input type="text" id="zip-input" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="20120" required>
+            <button type="submit" data-t-en="Check" data-t-es="Verificar">Check</button>
+          </div>
+          <div class="zip-result" id="zip-result" data-t-en="Try 22101, 20148, 20120…" data-t-es="Prueba 22101, 20148, 20120…">Try 22101, 20148, 20120…</div>
+        </form>
+      </div>
+
+      <div class="cities-grid" id="cities-grid"></div>
+    </div>
+  </div>
+
+  <!-- Segments: Residential / Commercial -->
+  <div class="section container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" data-t-en="Who we serve" data-t-es="A quién servimos">Who we serve</span>
+        <h2 data-t-en="Two audiences.<br/><em>One standard.</em>" data-t-es="Dos audiencias.<br/><em>Un mismo estándar.</em>">Two audiences.<br><em>One standard.</em></h2>
+      </div>
+      <div class="right" data-t-en="Whether it’s a family backyard or an HOA common area, we build to the same craftsmanship — with workflows tuned to each client." data-t-es="Ya sea el patio de una familia o el área común de un condominio, construimos con la misma artesanía — con procesos ajustados a cada cliente.">Whether it’s a family backyard or an HOA common area, we build to the same craftsmanship — with workflows tuned to each client.</div>
+    </div>
+    <div class="segments">
+      <div class="segment">
+        <div class="seg-media"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt=""></div>
+        <div class="seg-body">
+          <div class="seg-tag" data-t-en="RESIDENTIAL" data-t-es="RESIDENCIAL">RESIDENTIAL</div>
+          <h3 data-t-en="Your home is your sanctuary." data-t-es="Tu casa es tu santuario.">Your home is your sanctuary.</h3>
+          <p data-t-en="From first on-site consultation to final walk-through, we work around your family— respectful crews, clean job-sites, daily photo updates." data-t-es="Desde la primera consulta hasta la entrega final, trabajamos respetando tu familia — equipos respetuosos, obras limpias, fotos diarias.">From first on-site consultation to final walk-through, we work around your family— respectful crews, clean job-sites, daily photo updates.</p>
+          <ul class="seg-list">
+            <li data-t-en="Backyards, front yards &amp; driveways" data-t-es="Patios, jardines frontales y entradas">Backyards, front yards &amp; driveways</li>
+            <li data-t-en="Pool surrounds &amp; outdoor kitchens" data-t-es="Áreas de piscina y cocinas exteriores">Pool surrounds &amp; outdoor kitchens</li>
+            <li data-t-en="Seasonal maintenance packages" data-t-es="Paquetes de mantenimiento por temporada">Seasonal maintenance packages</li>
+          </ul>
+        </div>
+      </div>
+      <div class="segment">
+        <div class="seg-media"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" alt=""></div>
+        <div class="seg-body">
+          <div class="seg-tag" data-t-en="COMMERCIAL &amp; HOA" data-t-es="COMERCIAL Y HOA">COMMERCIAL &amp; HOA</div>
+          <h3 data-t-en="Grounds that reflect your brand." data-t-es="Jardines que reflejan tu marca.">Grounds that reflect your brand.</h3>
+          <p data-t-en="Property managers, HOAs and small business campuses. Scheduled maintenance contracts, snow removal, and full landscape renovations." data-t-es="Property managers, HOAs y campus comerciales. Contratos de mantenimiento programado, remoción de nieve y renovaciones completas.">Property managers, HOAs and small business campuses. Scheduled maintenance contracts, snow removal, and full landscape renovations.</p>
+          <ul class="seg-list">
+            <li data-t-en="Office &amp; retail grounds" data-t-es="Oficinas y comercios">Office &amp; retail grounds</li>
+            <li data-t-en="HOA common areas &amp; entrances" data-t-es="Áreas comunes de HOA y entradas">HOA common areas &amp; entrances</li>
+            <li data-t-en="Snow removal &amp; winter service" data-t-es="Remoción de nieve y servicio invernal">Snow removal &amp; winter service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Native plants / sustainability callout -->
+  <div class="section native" style="padding: var(--sp-9) 0">
+    <div class="container native-grid">
+      <div>
+        <span class="eyebrow" data-t-en="Sustainability" data-t-es="Sustentabilidad">Sustainability</span>
+        <h2 style="margin-top:16px" data-t-en="Virginia natives,<br/><em>built to thrive here.</em>" data-t-es="Plantas nativas de Virginia,<br/><em>para prosperar aquí.</em>">Virginia natives,<br><em>built to thrive here.</em></h2>
+        <p style="margin-top:24px;color:var(--ink-2);font-size:var(--fs-md);max-width:44ch" data-t-en="We specify native and climate-adapted plants — less water, fewer chemicals, stronger roots. Pollinator corridors, rain gardens, and drainage solutions that work with Virginia’s clay soil instead of against it." data-t-es="Especificamos plantas nativas y adaptadas al clima — menos agua, menos químicos, raíces más fuertes. Corredores para polinizadores, jardines de lluvia y soluciones de drenaje que trabajan con el suelo arcilloso de Virginia.">We specify native and climate-adapted plants — less water, fewer chemicals, stronger roots. Pollinator corridors, rain gardens, and drainage solutions that work with Virginia’s clay soil instead of against it.</p>
+      </div>
+      <div class="native-chips">
+        <div class="chip">Eastern Redbud</div>
+        <div class="chip">Virginia Bluebells</div>
+        <div class="chip">Black-Eyed Susan</div>
+        <div class="chip">Mountain Laurel</div>
+        <div class="chip">Little Bluestem</div>
+        <div class="chip">Serviceberry</div>
+        <div class="chip">Witch Hazel</div>
+        <div class="chip">Inkberry Holly</div>
+        <div class="chip">Coneflower</div>
+        <div class="chip">Switchgrass</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="section container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" data-t-en="Homeowner reviews" data-t-es="Opiniones de clientes">Homeowner reviews</span>
+        <h2 data-t-en="Twenty years of<br/><em>word-of-mouth.</em>" data-t-es="Veinte años de<br/><em>recomendación.</em>">Twenty years of<br><em>word-of-mouth.</em></h2>
+      </div>
+      <div class="right" data-t-en="Most of our work comes from referrals. Here is a small sample of recent homeowners — names abbreviated for privacy." data-t-es="La mayoría de nuestro trabajo viene por recomendación. Una pequeña muestra — nombres abreviados por privacidad.">Most of our work comes from referrals. Here is a small sample of recent homeowners — names abbreviated for privacy.</div>
+    </div>
+    <div class="testimonials" id="testimonials"></div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow" data-t-en="Common questions" data-t-es="Preguntas frecuentes">Common questions</span>
+        <h2 data-t-en="Before you call,<br/><em>the basics.</em>" data-t-es="Antes de llamar,<br/><em>lo básico.</em>">Before you call,<br><em>the basics.</em></h2>
+      </div>
+      <div class="right" data-t-en="Still wondering something? Pick up the phone — we answer on weekdays between 8 and 6." data-t-es="¿Alguna duda más? Llama — contestamos de lunes a viernes, 8 a 6.">Still wondering something? Pick up the phone — we answer on weekdays between 8 and 6.</div>
+    </div>
+    <div class="faq" id="faq">
+      <details class="faq-item" open>
+        <summary data-t-en="Are estimates really free?" data-t-es="¿Las cotizaciones son realmente gratis?">Are estimates really free?</summary>
+        <p data-t-en="Yes. We visit your site, measure, listen and leave a written proposal within 5 business days — no obligation, no deposit." data-t-es="Sí. Visitamos tu sitio, medimos, escuchamos y dejamos una propuesta escrita en 5 días hábiles — sin compromiso, sin depósito.">Yes. We visit your site, measure, listen and leave a written proposal within 5 business days — no obligation, no deposit.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-t-en="What areas do you serve?" data-t-es="¿Qué áreas atienden?">What areas do you serve?</summary>
+        <p data-t-en="Northern Virginia — Fairfax, Ashburn, Leesburg, Gainesville, Vienna, McLean, Arlington and Manassas. Outside the ring? Call us; we take on larger projects further out." data-t-es="Norte de Virginia — Fairfax, Ashburn, Leesburg, Gainesville, Vienna, McLean, Arlington y Manassas. ¿Fuera del área? Llámanos; aceptamos proyectos grandes más lejos.">Northern Virginia — Fairfax, Ashburn, Leesburg, Gainesville, Vienna, McLean, Arlington and Manassas. Outside the ring? Call us; we take on larger projects further out.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-t-en="How long does a typical project take?" data-t-es="¿Cuánto tarda un proyecto típico?">How long does a typical project take?</summary>
+        <p data-t-en="A standard paver patio: 5–10 working days. A full outdoor living room with fireplace: 4–6 weeks. We give written timelines before we start." data-t-es="Un patio de pavers estándar: 5 a 10 días laborales. Un espacio exterior completo con chimenea: 4 a 6 semanas. Damos plazos escritos antes de empezar.">A standard paver patio: 5–10 working days. A full outdoor living room with fireplace: 4–6 weeks. We give written timelines before we start.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-t-en="Do you pull permits?" data-t-es="¿Tramitan permisos?">Do you pull permits?</summary>
+        <p data-t-en="Yes. As a Class A contractor we handle all required county permits, HOA approvals and Miss Utility locates." data-t-es="Sí. Como contratista Clase A gestionamos todos los permisos del condado, aprobaciones de HOA y localización de servicios.">Yes. As a Class A contractor we handle all required county permits, HOA approvals and Miss Utility locates.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-t-en="What’s your warranty?" data-t-es="¿Qué garantía ofrecen?">What’s your warranty?</summary>
+        <p data-t-en="Two years on our workmanship, plus whatever the material manufacturer offers (typically 25 years on pavers). If something settles or shifts, we come back." data-t-es="Dos años en mano de obra, más lo que ofrezca el fabricante (típicamente 25 años en pavers). Si algo se hunde o mueve, regresamos.">Two years on our workmanship, plus whatever the material manufacturer offers (typically 25 years on pavers). If something settles or shifts, we come back.</p>
+      </details>
+      <details class="faq-item">
+        <summary data-t-en="Do you speak Spanish?" data-t-es="¿Hablan español?">Do you speak Spanish?</summary>
+        <p data-t-en="Sí. Toda nuestra comunicación — cotizaciones, contratos, actualizaciones diarias — está disponible en inglés o español." data-t-es="Sí. Toda nuestra comunicación — cotizaciones, contratos, actualizaciones diarias — está disponible en inglés o español.">Sí. Toda nuestra comunicación — cotizaciones, contratos, actualizaciones diarias — está disponible en inglés o español.</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Brands / materials -->
+  <div class="brands">
+    <div class="container">
+      <div style="font-family:var(--font-mono);font-size:var(--fs-xs);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:24px"
+           data-t-en="We install with materials from" data-t-es="Trabajamos con materiales de">We install with materials from</div>
+      <div class="brands-row">
+        <div class="brand-logo">Belgard</div>
+        <div class="brand-logo" style="font-family:var(--font-mono)">TECHO-BLOC</div>
+        <div class="brand-logo">Cambridge</div>
+        <div class="brand-logo" style="font-family:var(--font-mono)">Unilock</div>
+        <div class="brand-logo">Eldorado</div>
+        <div class="brand-logo" style="font-family:var(--font-mono)">Cultured Stone</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA banner -->
+  <div class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <span class="eyebrow" style="color:color-mix(in oklab, var(--accent-ink) 70%, transparent)"
+              data-t-en="Ready when you are" data-t-es="Cuando estés listo">Ready when you are</span>
+        <h2 style="margin-top:24px" data-t-en="Let's talk about the <em>space you'd rather be in.</em>"
+            data-t-es="Hablemos del <em>espacio en el que prefieres estar.</em>">Let's talk about the <em>space you'd rather be in.</em></h2>
+      </div>
+      <div class="cta-meta">
+        <div>
+          <div style="font-family:var(--font-mono);font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;opacity:.8;color:color-mix(in oklab,var(--accent-ink) 85%,transparent)"
+               data-t-en="Call us" data-t-es="Llámanos">Call us</div>
+          <div class="phone">(+571) 288-3130</div>
+        </div>
+        <div>
+          <div style="font-family:var(--font-mono);font-size:var(--fs-xs);letter-spacing:.12em;text-transform:uppercase;opacity:.8"
+               data-t-en="Email" data-t-es="Correo">Email</div>
+          <div class="em"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="92f1fdfce6f3f1e6d2fefdfff3e0bff5f1f5bcf1fdff">[email&#160;protected]</a></div>
+        </div>
+        <a href="#contact" data-nav="contact" class="btn btn-dark"
+           data-t-en="Book a free consultation" data-t-es="Agenda una consulta gratis">Book a free consultation <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="page" id="page-services">
+  <div class="hero container">
+    <div>
+      <span class="eyebrow" data-t-en="Services" data-t-es="Servicios">Services</span>
+      <h1 style="max-width:18ch;margin-top:24px"
+        data-t-en="Every outdoor surface, <em>built by hand.</em>"
+        data-t-es="Cada superficie exterior, <em>hecha a mano.</em>">Every outdoor surface, <em>built by hand.</em></h1>
+      <p class="hero-sub" style="max-width:56ch"
+        data-t-en="We build eight distinct disciplines — patios, driveways, retaining walls, stone veneers, fireplaces, pool decks, outdoor lighting and masonry repair. Each one to the same standard."
+        data-t-es="Ocho disciplinas — patios, entradas, muros, revestimientos de piedra, chimeneas, decks de piscina, iluminación exterior y reparación de mampostería. Todas al mismo estándar.">We build eight distinct disciplines — patios, driveways, retaining walls, stone veneers, fireplaces, pool decks, outdoor lighting and masonry repair. Each one to the same standard.</p>
+    </div>
+  </div>
+
+  <div class="container section" style="padding-top:0">
+    <div class="services-grid" id="services-grid"></div>
+  </div>
+
+  <div class="section process">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow" data-t-en="Materials" data-t-es="Materiales">Materials</span>
+          <h2 data-t-en="What we work with." data-t-es="Con qué trabajamos.">What we work with.</h2>
+        </div>
+        <div class="right" data-t-en="We source from suppliers who stand behind their product. If a material won't survive 15 Virginia winters, we won't install it."
+             data-t-es="Trabajamos con proveedores que respaldan su producto. Si un material no sobrevive 15 inviernos de Virginia, no lo instalamos.">We source from suppliers who stand behind their product. If a material won't survive 15 Virginia winters, we won't install it.</div>
+      </div>
+      <div class="process-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="step">
+          <div class="num">MATERIAL 01</div>
+          <h4>Concrete Pavers</h4>
+          <p data-t-en="Belgard, Techo-Bloc, Cambridge &amp; Unilock. Interlocking, frost-rated, 25-yr warranties."
+             data-t-es="Belgard, Techo-Bloc, Cambridge y Unilock. Sistemas entrelazados, resistentes a heladas, 25 años de garantía.">Belgard, Techo-Bloc, Cambridge &amp; Unilock. Interlocking, frost-rated, 25-yr warranties.</p>
+        </div>
+        <div class="step">
+          <div class="num">MATERIAL 02</div>
+          <h4>Natural Stone</h4>
+          <p data-t-en="Pennsylvania flagstone, bluestone and fieldstone. Hand-fit, hand-split."
+             data-t-es="Piedra de Pennsylvania, bluestone y fieldstone. Cortadas y ajustadas a mano.">Pennsylvania flagstone, bluestone and fieldstone. Hand-fit, hand-split.</p>
+        </div>
+        <div class="step" style="border-right:none">
+          <div class="num">MATERIAL 03</div>
+          <h4>Stone Veneers</h4>
+          <p data-t-en="Eldorado and Cultured Stone for chimneys, columns, pillars and house exteriors."
+             data-t-es="Eldorado y Cultured Stone para chimeneas, columnas, pilares y fachadas.">Eldorado and Cultured Stone for chimneys, columns, pillars and house exteriors.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="page" id="page-portfolio">
+  <div class="hero container">
+    <div>
+      <span class="eyebrow" data-t-en="Portfolio" data-t-es="Portafolio">Portfolio</span>
+      <h1 style="max-width:20ch;margin-top:24px"
+        data-t-en="Selected projects <em>across the DMV.</em>"
+        data-t-es="Proyectos seleccionados <em>en el área metropolitana.</em>">Selected projects <em>across the DMV.</em></h1>
+    </div>
+  </div>
+
+  <div class="container section" style="padding-top:0">
+    <div class="portfolio-grid">
+      <a class="pf-item pf-a"><img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1400&q=80"><div class="meta"><div class="cat">Outdoor Living · Ashburn · 2025</div><div class="ti">The Covington Residence</div></div></a>
+      <a class="pf-item pf-b"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"><div class="meta"><div class="cat">Fireplace · McLean · 2024</div><div class="ti">Dry-stack Chimney</div></div></a>
+      <a class="pf-item pf-c"><img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=900&q=80" onerror="this.parentNode.insertBefore(Object.assign(document.createElement('div'),{className:'ph',style:'position:absolute;inset:0'}),this);this.remove()"><div class="meta"><div class="cat">Driveway · Vienna · 2025</div><div class="ti">Belgard Herringbone</div></div></a>
+      <a class="pf-item pf-d"><img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=900&q=80"><div class="meta"><div class="cat">Retaining Walls · Leesburg · 2024</div><div class="ti">Garden Terracing</div></div></a>
+      <a class="pf-item pf-e"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=80"><div class="meta"><div class="cat">Pool Deck · Gainesville · 2025</div><div class="ti">Travertine Surround</div></div></a>
+      <a class="pf-item pf-f"><img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1400&q=80"><div class="meta"><div class="cat">Outdoor Living · Fairfax · 2024</div><div class="ti">Bluestone Pergola Patio</div></div></a>
+      <a class="pf-item pf-g"><img src="https://images.unsplash.com/photo-1588854337236-6889d631faa8?auto=format&fit=crop&w=1400&q=80"><div class="meta"><div class="cat">Driveway &amp; Walkway · Arlington · 2025</div><div class="ti">Basalt &amp; Granite</div></div></a>
+      <a class="pf-item pf-a"><img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1400&q=80"><div class="meta"><div class="cat">Stone Veneer · Vienna · 2024</div><div class="ti">Full-House Reface</div></div></a>
+      <a class="pf-item pf-b"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"><div class="meta"><div class="cat">Fire Pit · Ashburn · 2025</div><div class="ti">Sunken Conversation Pit</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="page" id="page-about">
+  <div class="hero container">
+    <div>
+      <span class="eyebrow" data-t-en="About Lomar GCG" data-t-es="Acerca de Lomar GCG">About Lomar GCG</span>
+      <h1 style="max-width:20ch;margin-top:24px"
+        data-t-en="Family-owned.<br/><em>Twenty years</em> on Virginia job-sites."
+        data-t-es="Negocio familiar.<br/><em>Veinte años</em> en obras de Virginia.">Family-owned.<br><em>Twenty years</em> on Virginia job-sites.</h1>
+    </div>
+  </div>
+
+  <div class="container section" style="padding-top:0">
+    <div class="about-grid">
+      <div class="about-media">
+        <img src="https://images.unsplash.com/photo-1621155346337-1d19476ba7d6?auto=format&fit=crop&w=1200&q=80" alt="Team at work">
+      </div>
+      <div class="about-text">
+        <h2 data-t-en="We build so you can <em>live outside.</em>"
+            data-t-es="Construimos para que <em>vivas afuera.</em>">We build so you can <em>live outside.</em></h2>
+        <p data-t-en="Lomar Scapes Solutions started as two brothers laying a patio on a weekend in Manassas. Two decades later, we're a full-service general contractor building outdoor spaces across the Northern Virginia metro."
+           data-t-es="Lomar Scapes Solutions empezó con dos hermanos instalando un patio un fin de semana en Manassas. Dos décadas después somos un contratista general en todo el norte de Virginia.">Lomar Scapes Solutions started as two brothers laying a patio on a weekend in Manassas. Two decades later, we're a full-service general contractor building outdoor spaces across the Northern Virginia metro.</p>
+        <p data-t-en="Our mission stays simple: help homeowners enhance their dream. Exclusive design, careful craftsmanship, total satisfaction — during and after the project."
+           data-t-es="Nuestra misión es simple: ayudar a dueños a hacer realidad su visión. Diseño exclusivo, trabajo cuidadoso y satisfacción total — durante y después del proyecto.">Our mission stays simple: help homeowners enhance their dream. Exclusive design, careful craftsmanship, total satisfaction — during and after the project.</p>
+        <div class="values">
+          <div class="value">
+            <div class="num">01</div>
+            <div>
+              <h4 data-t-en="Built in-house, never subcontracted"
+                  data-t-es="Construido en casa, nunca subcontratado">Built in-house, never subcontracted</h4>
+              <p data-t-en="The foreman you meet on day one is on-site every day after."
+                 data-t-es="El capataz que conoces el primer día está en la obra cada día después.">The foreman you meet on day one is on-site every day after.</p>
+            </div>
+          </div>
+          <div class="value">
+            <div class="num">02</div>
+            <div>
+              <h4 data-t-en="Fixed quotes, written timelines"
+                  data-t-es="Cotizaciones fijas, plazos escritos">Fixed quotes, written timelines</h4>
+              <p data-t-en="No surprise change-orders. What we quote is what you pay."
+                 data-t-es="Sin cambios sorpresa. Lo que cotizamos es lo que pagas.">No surprise change-orders. What we quote is what you pay.</p>
+            </div>
+          </div>
+          <div class="value">
+            <div class="num">03</div>
+            <div>
+              <h4 data-t-en="Materials that survive Virginia winters"
+                  data-t-es="Materiales que resisten inviernos de Virginia">Materials that survive Virginia winters</h4>
+              <p data-t-en="Frost-rated pavers, polymeric joints, proper drainage. Built once, built right."
+                 data-t-es="Pavers resistentes a heladas, juntas poliméricas, drenaje adecuado. Se hace bien desde el principio.">Frost-rated pavers, polymeric joints, proper drainage. Built once, built right.</p>
+            </div>
+          </div>
+          <div class="value">
+            <div class="num">04</div>
+            <div>
+              <h4 data-t-en="Two-year workmanship warranty"
+                  data-t-es="Garantía de dos años en mano de obra">Two-year workmanship warranty</h4>
+              <p data-t-en="Plus 25-year manufacturer warranties on major materials."
+                 data-t-es="Más garantías de 25 años del fabricante en los materiales principales.">Plus 25-year manufacturer warranties on major materials.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="page" id="page-contact">
+  <div class="hero container">
+    <div>
+      <span class="eyebrow" data-t-en="Contact" data-t-es="Contacto">Contact</span>
+      <h1 style="max-width:20ch;margin-top:24px"
+        data-t-en="Let's build <em>your outdoor room.</em>"
+        data-t-es="Construyamos <em>tu espacio exterior.</em>">Let's build <em>your outdoor room.</em></h1>
+      <p class="hero-sub" style="max-width:52ch"
+        data-t-en="Free on-site estimates in the DMV. Written proposals within 5 business days. No obligation."
+        data-t-es="Cotización gratuita en el área metropolitana. Propuesta escrita en 5 días hábiles. Sin compromiso.">Free on-site estimates in the DMV. Written proposals within 5 business days. No obligation.</p>
+    </div>
+  </div>
+
+  <div class="container section" style="padding-top:20px">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="info-block">
+          <div class="l" data-t-en="Phone" data-t-es="Teléfono">Phone</div>
+          <div class="v">(+571) 288-3130</div>
+          <div class="v2" data-t-en="Mon — Fri, 08:00 — 18:00 ET" data-t-es="Lun — Vie, 08:00 — 18:00 ET">Mon — Fri, 08:00 — 18:00 ET</div>
+        </div>
+        <div class="info-block">
+          <div class="l" data-t-en="Email" data-t-es="Correo">Email</div>
+          <div class="v"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="690a06071d080a1d29050604081b440e0a0e470a0604">[email&#160;protected]</a></div>
+          <div class="v2" data-t-en="We reply within one business day." data-t-es="Respondemos en un día hábil.">We reply within one business day.</div>
+        </div>
+        <div class="info-block">
+          <div class="l" data-t-en="Office" data-t-es="Oficina">Office</div>
+          <div class="v">Manassas, VA</div>
+          <div class="v2" data-t-en="Serving the Northern Virginia metro area."
+               data-t-es="Servimos el norte de Virginia y alrededores.">Serving the Northern Virginia metro area.</div>
+        </div>
+        <div class="info-block">
+          <div class="l" data-t-en="Languages" data-t-es="Idiomas">Languages</div>
+          <div class="v">English · Español</div>
+        </div>
+      </div>
+
+      <form class="contact-form" onsubmit="return submitContact(event)">
+        <div class="field-row">
+          <div class="field">
+            <label data-t-en="First name" data-t-es="Nombre">First name</label>
+            <input type="text" name="first" required>
+          </div>
+          <div class="field">
+            <label data-t-en="Last name" data-t-es="Apellido">Last name</label>
+            <input type="text" name="last" required>
+          </div>
+        </div>
+        <div class="field">
+          <label data-t-en="Email" data-t-es="Correo">Email</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="field">
+          <label data-t-en="Phone" data-t-es="Teléfono">Phone</label>
+          <input type="tel" name="phone">
+        </div>
+        <div class="field">
+          <label data-t-en="Service interested in" data-t-es="Servicio de interés">Service interested in</label>
+          <select name="service">
+            <option data-t-en="Choose one…" data-t-es="Elige uno…">Choose one…</option>
+            <option>Paver Patios</option>
+            <option>Driveways &amp; Entrances</option>
+            <option>Outdoor Living</option>
+            <option>Retaining Walls &amp; Gardens</option>
+            <option>Custom Stone Veneers</option>
+            <option>Fireplaces, Firepits &amp; Grills</option>
+            <option>Pool &amp; Pool Decks</option>
+            <option>Outdoor Lighting</option>
+          </select>
+        </div>
+        <div class="field">
+          <label data-t-en="Tell us about your project" data-t-es="Cuéntanos sobre tu proyecto">Tell us about your project</label>
+          <textarea name="msg" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="align-self:flex-start"
+          data-t-en="Send my message" data-t-es="Enviar mensaje">Send my message <span class="arrow">→</span></button>
+        <div id="contact-result" style="color:oklch(0.5 0.14 150);font-size:var(--fs-sm);display:none"
+          data-t-en="✓ Thanks — we'll be in touch within one business day."
+          data-t-es="✓ Gracias — te contactaremos en un día hábil.">✓ Thanks — we'll be in touch within one business day.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Floating call button -->
+<a href="tel:+5712883130" class="float-call" aria-label="Call Lomar GCG">
+  <span class="fc-icon">☎</span>
+  <span class="fc-label"><span class="fc-top" data-t-en="Call now" data-t-es="Llama ya">Call now</span><span class="fc-num">(571) 288-3130</span></span>
+</a>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="container">
+    <div class="foot-top">
+      <div>
+        <div class="brand" style="color:var(--bg)">
+          <img src="logo-lomar-gcg.png" alt="Lomar General Contracting Group" class="brand-logo">
+        </div>
+        <p style="margin-top:20px;font-size:var(--fs-sm);max-width:36ch;color:color-mix(in oklab,var(--bg) 65%,var(--ink))"
+          data-t-en="Outdoor construction for Virginia homeowners. Family-owned since 2006."
+          data-t-es="Construcción exterior para hogares en Virginia. Negocio familiar desde 2006.">Outdoor construction for Virginia homeowners. Family-owned since 2006.</p>
+      </div>
+      <div>
+        <h4 data-t-en="Navigate" data-t-es="Navegar">Navigate</h4>
+        <ul>
+          <li><a href="#home" data-nav="home" data-t-en="Home" data-t-es="Inicio">Home</a></li>
+          <li><a href="#services" data-nav="services" data-t-en="Services" data-t-es="Servicios">Services</a></li>
+          <li><a href="#portfolio" data-nav="portfolio" data-t-en="Portfolio" data-t-es="Portafolio">Portfolio</a></li>
+          <li><a href="#about" data-nav="about" data-t-en="About" data-t-es="Nosotros">About</a></li>
+          <li><a href="#contact" data-nav="contact" data-t-en="Contact" data-t-es="Contacto">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t-en="Services" data-t-es="Servicios">Services</h4>
+        <ul>
+          <li><a href="#services" data-nav="services">Paver Patios</a></li>
+          <li><a href="#services" data-nav="services">Driveways</a></li>
+          <li><a href="#services" data-nav="services">Fireplaces</a></li>
+          <li><a href="#services" data-nav="services">Retaining Walls</a></li>
+          <li><a href="#services" data-nav="services">Pool Decks</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-t-en="Contact" data-t-es="Contacto">Contact</h4>
+        <ul>
+          <li>(+571) 288-3130</li>
+          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0665696872676572466a696b67742b6165612865696b">[email&#160;protected]</a></li>
+          <li>Manassas, VA</li>
+          <li>Mon — Fri, 08:00-18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-huge">Lomar <em>GCG</em> · Outdoor Construction</div>
+    <div class="foot-bottom">
+      <span>© 2026 Lomar GCG — All rights reserved</span>
+      <span>Made with care in Virginia</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ TWEAKS ============ -->
+<div id="tweaks" aria-label="Design tweaks">
+  <div class="group">
+    <h5>Palette</h5>
+    <div class="swatches" id="tw-palette">
+      <button class="sw on" data-name="Lomar" data-v="lomar" style="background:oklch(0.4 0.12 145)"></button>
+      <button class="sw" data-name="Terra" data-v="terra" style="background:oklch(0.55 0.18 42)"></button>
+      <button class="sw" data-name="Forge" data-v="forge" style="background:oklch(0.58 0.2 28)"></button>
+      <button class="sw" data-name="Meadow" data-v="meadow" style="background:oklch(0.48 0.14 145)"></button>
+      <button class="sw" data-name="Night" data-v="midnight" style="background:oklch(0.78 0.16 70)"></button>
+    </div>
+  </div>
+  <div class="group" style="margin-top:22px">
+    <h5>Typography</h5>
+    <div class="opts" id="tw-type">
+      <button class="opt on" data-v="editorial">Editorial</button>
+      <button class="opt" data-v="industrial">Industrial</button>
+      <button class="opt" data-v="craft">Craft</button>
+    </div>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+<script src="app.js?v=4"></script>
+</body>
+</html>
