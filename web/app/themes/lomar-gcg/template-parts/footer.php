@@ -31,7 +31,7 @@
 
       <div class="footer-contact">
         <p class="eyebrow"><?php esc_html_e( 'Get in touch', 'lomar-gcg' ); ?></p>
-        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-primary" style="margin-top: 16px;">
+        <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-ghost-light" style="margin-top: 16px;">
           <?php esc_html_e( 'Free Estimate →', 'lomar-gcg' ); ?>
         </a>
       </div>

@@ -32,6 +32,7 @@
           'fallback_cb'    => function (): void {
               echo '<ul class="nav-links">';
               echo '<li><a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'lomar-gcg' ) . '</a></li>';
+              echo '<li><a href="' . esc_url( home_url( '/services' ) ) . '">' . esc_html__( 'Services', 'lomar-gcg' ) . '</a></li>';
               echo '<li><a href="' . esc_url( home_url( '/portfolio' ) ) . '">' . esc_html__( 'Portfolio', 'lomar-gcg' ) . '</a></li>';
               echo '<li><a href="' . esc_url( home_url( '/contact' ) ) . '">' . esc_html__( 'Contact', 'lomar-gcg' ) . '</a></li>';
               echo '</ul>';
@@ -42,7 +43,6 @@
       <div class="nav-cta">
         <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-primary">
           <?php esc_html_e( 'Get a Free Estimate', 'lomar-gcg' ); ?>
-          <span class="arrow" aria-hidden="true">→</span>
         </a>
       </div>
 
@@ -61,11 +61,12 @@
   <button class="mobile-close" aria-label="<?php esc_attr_e( 'Close menu', 'lomar-gcg' ); ?>">✕</button>
   <ul class="nav-links">
     <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'lomar-gcg' ); ?></a></li>
+    <li><a href="<?php echo esc_url( home_url( '/services' ) ); ?>"><?php esc_html_e( 'Services', 'lomar-gcg' ); ?></a></li>
     <li><a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>"><?php esc_html_e( 'Portfolio', 'lomar-gcg' ); ?></a></li>
     <li><a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php esc_html_e( 'Contact', 'lomar-gcg' ); ?></a></li>
   </ul>
   <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-primary">
-    <?php esc_html_e( 'Get a Free Estimate', 'lomar-gcg' ); ?> →
+    <?php esc_html_e( 'Get a Free Estimate', 'lomar-gcg' ); ?>
   </a>
 </div>
 

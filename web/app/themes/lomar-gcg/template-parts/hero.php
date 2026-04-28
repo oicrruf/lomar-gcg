@@ -18,7 +18,6 @@
         <div class="hero-ctas">
           <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>" class="btn btn-primary">
             <?php esc_html_e( 'Get a Free Estimate', 'lomar-gcg' ); ?>
-            <span class="arrow" aria-hidden="true">→</span>
           </a>
           <a href="<?php echo esc_url( home_url( '/portfolio' ) ); ?>" class="btn btn-ghost">
             <?php esc_html_e( 'See Our Work', 'lomar-gcg' ); ?>

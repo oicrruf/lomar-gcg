@@ -38,13 +38,13 @@ add_action('wp_enqueue_scripts', function (): void {
     }
 
     // GLightbox — local copy, no CDN
-    if (is_front_page() || is_post_type_archive('project')) {
+    if (is_front_page() || is_post_type_archive('project') || is_page('portfolio')) {
         wp_enqueue_style('glightbox', LOMAR_URI . '/assets/css/glightbox.min.css', [], '3.3.0');
-        // wp_enqueue_script( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox@3/dist/js/glightbox.min.js', [], '3.3.0', true );
+        wp_enqueue_script('glightbox', LOMAR_URI . '/assets/js/glightbox.min.js', [], '3.3.0', true);
     }
 
     // Leaflet — local CSS, deferred JS
-    if (is_front_page()) {
+    if (is_front_page() || is_page('contact')) {
         wp_enqueue_style('leaflet', LOMAR_URI . '/assets/css/leaflet.css', [], '1.9.4');
         wp_enqueue_script('leaflet', 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js', [], '1.9.4', true);
     }

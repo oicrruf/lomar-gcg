@@ -116,15 +116,103 @@ const initMap = () => {
     .openPopup();
 };
 
+// ── Portfolio filter ───────────────────────────────────────────────────
+const initPortfolioFilter = () => {
+  const filters  = document.querySelectorAll('.pf-filter');
+  const grid     = document.querySelector('.portfolio-grid--full');
+  const countEl  = document.getElementById('pf-visible-count');
+
+  if (!filters.length || !grid) return;
+
+  const items = Array.from(grid.querySelectorAll('.pf-item'));
+
+  const updateCount = () => {
+    const visible = items.filter(el => !el.classList.contains('pf-hidden')).length;
+    if (countEl) countEl.textContent = visible;
+  };
+
+  // Set initial count
+  updateCount();
+
+  const applyFilter = (active) => {
+    items.forEach(item => {
+      const service = item.dataset.service || '';
+      const match   = active === 'all' || service === active;
+
+      if (!match) {
+        item.classList.add('pf-hiding');
+        setTimeout(() => {
+          item.classList.add('pf-hidden');
+          item.classList.remove('pf-hiding');
+          updateCount();
+        }, 230);
+      } else {
+        item.classList.remove('pf-hidden');
+        // Force reflow so transition plays
+        void item.offsetWidth;
+        item.classList.remove('pf-hiding');
+        updateCount();
+      }
+    });
+  };
+
+  filters.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filters.forEach(b => {
+        b.classList.remove('on');
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.classList.add('on');
+      btn.setAttribute('aria-selected', 'true');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+};
+
+// ── Hero stat counters ─────────────────────────────────────────────────
+const initStatCounters = () => {
+  const nodes = document.querySelectorAll('.hero-meta > div .n');
+  if (!nodes.length) return;
+
+  const countUp = (el, target, duration = 900) => {
+    const suffix = el.querySelector('em')?.textContent ?? '';
+    const start = performance.now();
+    const tick = (now) => {
+      const progress = Math.min((now - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.firstChild.textContent = Math.round(ease * target);
+      if (progress < 1) requestAnimationFrame(tick);
+      else el.firstChild.textContent = target;
+    };
+    el.innerHTML = `0<em>${suffix}</em>`;
+    requestAnimationFrame(tick);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      observer.unobserve(entry.target);
+      const el = entry.target;
+      const raw = el.textContent.replace(/\D/g, '');
+      countUp(el, parseInt(raw, 10));
+    });
+  }, { threshold: 0.5 });
+
+  nodes.forEach(n => observer.observe(n));
+};
+
 // ── Init all ──────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initNavScroll();
   initMobileMenu();
+  initPortfolioFilter();
+  initStatCounters();
 });
 
 // Lightbox and map depend on deferred CDN scripts (glightbox, leaflet).
 // window.load fires after all deferred scripts have executed.
 window.addEventListener('load', () => {
   initLightbox();
-  initMap();
+  // Map renders on homepage and contact page (both include #service-map).
+  if (document.getElementById('service-map')) initMap();
 });
